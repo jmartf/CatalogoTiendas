@@ -23,8 +23,9 @@ h1, h2, p { margin-top: 0; }
 .brand-light small { color: #a9beb7; }
 .login-page { min-height: 100vh; background: white; }
 .login-intro { display: none; }
-.login-store-logos { display: flex; width: min(100%, 520px); min-height: 100px; align-items: center; gap: 1.25rem; }
-.login-store-logos img { width: min(46%, 230px); height: 90px; object-fit: contain; }
+.login-store-logos { display: flex; width: min(100%, 520px); min-height: 100px; overflow: hidden; align-items: center; gap: 1.25rem; }
+.login-store-logos img { width: min(46%, 230px); height: 90px; object-fit: contain; transform: scale(2.05); }
+.login-store-logos img:last-child { transform: scale(2.15); }
 .login-store-logos > span { width: 1px; height: 42px; background: rgba(255,255,255,.3); }
 .login-panel { display: grid; min-height: 100vh; place-items: center; padding: 1.5rem; }
 .login-form { width: min(100%, 420px); display: grid; gap: 1.25rem; }
@@ -277,8 +278,9 @@ h1, h2, p { margin-top: 0; }
 .image-help { margin: .65rem 0 0; color: #7b8b85; font-size: .7rem; }
 .public-catalog-page { min-height: 100vh; background: linear-gradient(180deg, #f2f6fb 0, #fafbfc 420px, #f7f7f5 100%); color: #17334e; }
 .public-header { position: sticky; top: 0; z-index: 10; display: flex; height: 76px; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,.14); padding: 0 1rem; background: rgba(20,70,119,.97); color: white; box-shadow: 0 8px 28px rgba(12,48,84,.2); backdrop-filter: blur(14px); }
-.public-header-brands { display: flex; min-width: 0; height: 100%; align-items: center; gap: .6rem; }
-.public-header-brands img { display: block; width: clamp(105px, 19vw, 175px); height: 58px; object-fit: contain; }
+.public-header-brands { display: flex; min-width: 0; height: 100%; overflow: hidden; align-items: center; gap: .6rem; }
+.public-header-brands img { display: block; width: clamp(105px, 19vw, 175px); height: 58px; object-fit: contain; transform: scale(1.95); }
+.public-header-brands img:last-child { transform: scale(2.05); }
 .public-header-brands > span { flex: 0 0 1px; width: 1px; height: 30px; background: rgba(255,255,255,.28); }
 .public-nav { display: flex; align-items: center; gap: .35rem; }
 .public-nav a { display: inline-flex; width: 42px; min-height: 42px; align-items: center; justify-content: center; border-radius: 11px; padding: 0; color: white; font-size: 1.1rem; font-weight: 800; }
@@ -294,13 +296,15 @@ h1, h2, p { margin-top: 0; }
 .store-brands { overflow: hidden; border-radius: 20px; padding: 1.1rem; background: linear-gradient(135deg, #195b94, #103b67); color: #d9e9f6; box-shadow: 0 16px 40px rgba(17,65,108,.22); }
 .store-brands > span { display: block; margin-bottom: .65rem; font-size: .58rem; font-weight: 800; text-align: center; text-transform: uppercase; letter-spacing: .13em; }
 .store-brands > div { display: flex; min-height: 124px; align-items: center; justify-content: center; gap: .8rem; }
-.store-brands img { display: block; width: min(49%, 270px); height: 116px; object-fit: contain; }
+.store-brands img { display: block; width: min(49%, 270px); height: 116px; object-fit: contain; transform: scale(1.9); }
+.store-brands img:last-child { transform: scale(2); }
 .store-brands > div > span { width: 1px; height: 35px; background: rgba(255,255,255,.22); }
 .store-brands > div > strong { color: white; font-size: 1rem; text-align: center; }
 .store-brand-single { border-radius: 14px; padding: .65rem 1rem; }
 .store-brand-single > span { margin-bottom: .25rem; }
 .store-brand-single > div { min-height: 66px; }
-.store-brand-single img { width: min(82%, 320px); height: 62px; }
+.store-brand-single img { width: min(82%, 320px); height: 62px; transform: scale(2.35); }
+.store-brand-single img:last-child { transform: scale(2.5); }
 .public-controls { display: grid; gap: .55rem; border: 1px solid #d8e0da; border-radius: 17px; padding: .75rem; background: rgba(255,255,255,.92); box-shadow: 0 10px 30px rgba(33,61,53,.08); }
 .public-controls input, .public-controls select { width: 100%; min-height: 43px; border: 1px solid #ccd9e2; border-radius: 10px; padding: 0 .7rem; outline: 0; background: #fbfcfd; color: #28475e; }
 .public-controls input:focus, .public-controls select:focus { border-color: #377bb4; box-shadow: 0 0 0 3px rgba(55,123,180,.12); }
