@@ -37,13 +37,13 @@ export default function Login() {
   return (
     <main className="login-page">
       <section className="login-intro">
-        <div className="brand brand-light"><span className="brand-mark">CT</span><span><strong>Catálogo Tiendas</strong><small>Administración central</small></span></div>
-        <div><p className="eyebrow">Inventario, sin complicaciones</p><h1>Todas tus tiendas.<br />Un solo lugar.</h1><p>Una herramienta rápida y segura para registrar cada prenda y mantener al equipo coordinado.</p></div>
+        <div className="login-store-logos"><img src="/brands/jumping.png" alt="Jumping Ropa Americana" /><span aria-hidden="true" /><img src="/brands/american-home.png" alt="American Home Ropa Americana" /></div>
+        <div><p className="eyebrow">Gestión de nuestras tiendas</p><h1>Dos marcas.<br />Un solo equipo.</h1><p>Administra las prendas de Jumping y American Home, mantén el inventario actualizado y conecta cada cliente con la tienda correcta.</p></div>
         <p className="login-footnote">Acceso exclusivo para personal autorizado.</p>
       </section>
       <section className="login-panel">
         <form className="login-form" onSubmit={handleSubmit}>
-          <div><p className="eyebrow">Bienvenido</p><h2>Inicia sesión</h2><p>Ingresa con las credenciales asignadas por tu administrador.</p></div>
+          <div className="login-form-heading"><span><i className="bi bi-shop" aria-hidden="true" /></span><div><p className="eyebrow">Portal del equipo</p><h2>Inicia sesión</h2><p>Ingresa con las credenciales asignadas para administrar nuestras tiendas.</p></div></div>
           {!isSupabaseConfigured && <div className="notice notice-warning" role="alert">Falta configurar Supabase. Copia <code>.env.example</code> como <code>.env.local</code> y agrega las credenciales del proyecto.</div>}
           {(error || authError) && <div className="notice notice-error" role="alert">{error || authError}</div>}
           <label>Correo electrónico<input type="email" autoComplete="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="nombre@tienda.com" required disabled={!isSupabaseConfigured || submitting} /></label>

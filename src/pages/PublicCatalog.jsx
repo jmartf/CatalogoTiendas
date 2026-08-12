@@ -42,8 +42,7 @@ export default function PublicCatalog() {
       <PublicHeader />
       <main>
         <section className="public-hero">
-          <div className="public-hero-copy"><p className="eyebrow">Ropa americana · Piezas únicas</p><h1>Encuentra tu próxima prenda favorita.</h1><p>Descubre novedades de Jumping y American Home. Elige tu pieza y consulta su disponibilidad directamente con la tienda.</p></div>
-          <StoreBrands />
+          <div className="public-hero-copy"><p className="eyebrow"><i className="bi bi-bag-heart" aria-hidden="true" /> Catálogo de ropa americana</p><h1>Encuentra tu próxima prenda favorita.</h1><p>Descubre novedades de Jumping y American Home. Elige tu pieza y consulta su disponibilidad directamente con la tienda.</p></div>
         </section>
         <section className="public-controls" aria-label="Filtros del catálogo">
           <label className="public-search field-with-icon"><span className="sr-only">Buscar</span><i className="bi bi-search" aria-hidden="true" /><input type="search" value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Buscar prendas…" /></label>

@@ -23,8 +23,14 @@ h1, h2, p { margin-top: 0; }
 .brand-light small { color: #a9beb7; }
 .login-page { min-height: 100vh; background: white; }
 .login-intro { display: none; }
+.login-store-logos { display: flex; width: min(100%, 520px); min-height: 100px; align-items: center; gap: 1.25rem; }
+.login-store-logos img { width: min(46%, 230px); height: 90px; object-fit: contain; }
+.login-store-logos > span { width: 1px; height: 42px; background: rgba(255,255,255,.3); }
 .login-panel { display: grid; min-height: 100vh; place-items: center; padding: 1.5rem; }
 .login-form { width: min(100%, 420px); display: grid; gap: 1.25rem; }
+.login-form-heading { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: start; gap: .9rem; }
+.login-form-heading > span { display: grid; width: 44px; height: 44px; place-items: center; border-radius: 13px; background: #e2f0f9; color: #195d91; font-size: 1.1rem; }
+.login-form-heading .eyebrow { margin-top: .1rem; }
 .login-form h2 { margin-bottom: .4rem; font-size: clamp(2rem, 6vw, 2.6rem); }
 .login-form > div > p:last-child { color: #687b75; line-height: 1.6; }
 .login-form label { display: grid; gap: .5rem; font-size: .88rem; font-weight: 700; }
@@ -271,15 +277,17 @@ h1, h2, p { margin-top: 0; }
 .image-help { margin: .65rem 0 0; color: #7b8b85; font-size: .7rem; }
 .public-catalog-page { min-height: 100vh; background: linear-gradient(180deg, #f2f6fb 0, #fafbfc 420px, #f7f7f5 100%); color: #17334e; }
 .public-header { position: sticky; top: 0; z-index: 10; display: flex; height: 76px; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,.14); padding: 0 1rem; background: rgba(20,70,119,.97); color: white; box-shadow: 0 8px 28px rgba(12,48,84,.2); backdrop-filter: blur(14px); }
-.public-brand { display: inline-flex; align-items: center; gap: .72rem; color: white; font-size: 1rem; }
-.public-brand > i { font-size: 1.65rem; line-height: 1; }
+.public-header-brands { display: flex; min-width: 0; height: 100%; align-items: center; gap: .6rem; }
+.public-header-brands img { display: block; width: clamp(105px, 19vw, 175px); height: 58px; object-fit: contain; }
+.public-header-brands > span { flex: 0 0 1px; width: 1px; height: 30px; background: rgba(255,255,255,.28); }
 .public-nav { display: flex; align-items: center; gap: .35rem; }
-.public-nav a { display: inline-flex; min-height: 40px; align-items: center; gap: .38rem; border-radius: 10px; padding: 0 .7rem; color: #dbeae5; font-size: .7rem; font-weight: 800; }
+.public-nav a { display: inline-flex; width: 42px; min-height: 42px; align-items: center; justify-content: center; border-radius: 11px; padding: 0; color: white; font-size: 1.1rem; font-weight: 800; }
 .public-nav a:first-child { background: rgba(255,255,255,.11); color: white; }
 .public-nav a:hover { background: rgba(255,255,255,.16); color: white; }
 .public-catalog-page > main { max-width: 1250px; margin: auto; padding: 0 1rem 3rem; }
 .public-hero { display: grid; gap: 1.25rem; padding: 2.3rem 0 1.5rem; }
 .public-hero-copy { align-self: center; }
+.public-hero-copy .eyebrow { display: flex; align-items: center; gap: .45rem; }
 .public-hero .eyebrow { color: #286ca7; }
 .public-hero h1 { max-width: 740px; margin-bottom: .8rem; font-size: clamp(2.35rem, 9vw, 5.2rem); line-height: 1.01; letter-spacing: -.06em; }
 .public-hero-copy > p:last-child { max-width: 650px; margin-bottom: 0; color: #60756d; font-size: .9rem; line-height: 1.65; }
@@ -289,6 +297,10 @@ h1, h2, p { margin-top: 0; }
 .store-brands img { display: block; width: min(49%, 270px); height: 116px; object-fit: contain; }
 .store-brands > div > span { width: 1px; height: 35px; background: rgba(255,255,255,.22); }
 .store-brands > div > strong { color: white; font-size: 1rem; text-align: center; }
+.store-brand-single { border-radius: 14px; padding: .65rem 1rem; }
+.store-brand-single > span { margin-bottom: .25rem; }
+.store-brand-single > div { min-height: 66px; }
+.store-brand-single img { width: min(82%, 320px); height: 62px; }
 .public-controls { display: grid; gap: .55rem; border: 1px solid #d8e0da; border-radius: 17px; padding: .75rem; background: rgba(255,255,255,.92); box-shadow: 0 10px 30px rgba(33,61,53,.08); }
 .public-controls input, .public-controls select { width: 100%; min-height: 43px; border: 1px solid #ccd9e2; border-radius: 10px; padding: 0 .7rem; outline: 0; background: #fbfcfd; color: #28475e; }
 .public-controls input:focus, .public-controls select:focus { border-color: #377bb4; box-shadow: 0 0 0 3px rgba(55,123,180,.12); }
@@ -338,9 +350,7 @@ h1, h2, p { margin-top: 0; }
 .public-thumbnails button.active { border-color: #236ba7; }
 .public-thumbnails img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .public-product-info { min-width: 0; }
-.public-product-info > .store-brands { margin-bottom: 1.1rem; border-radius: 14px; padding: .8rem; }
-.public-product-info > .store-brands > div { min-height: 86px; }
-.public-product-info > .store-brands img { width: min(88%, 300px); height: 82px; }
+.public-product-info > .store-brands { margin-bottom: 1.1rem; }
 .public-detail-location { margin-bottom: .5rem; color: #668078; font-size: .75rem; font-weight: 800; }
 .public-product-info h1 { margin-bottom: .75rem; font-size: clamp(2rem, 8vw, 3.7rem); line-height: 1.08; letter-spacing: -.045em; }
 .public-detail-price { display: block; color: #18588e; font-size: 1.45rem; }
@@ -416,7 +426,7 @@ h1, h2, p { margin-top: 0; }
   .image-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .catalog-preview-link { display: inline-flex; }
   .public-header { padding: 0 2rem; }
-  .public-hero { grid-template-columns: minmax(0, 1.45fr) minmax(310px, .72fr); gap: 2rem; padding-top: 3.2rem; }
+  .public-hero { padding-top: 3.2rem; }
   .public-catalog-page > main { padding-right: 2rem; padding-left: 2rem; }
   .public-controls { grid-template-columns: minmax(220px, 1fr) 190px 190px; }
   .public-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
@@ -462,8 +472,9 @@ h1, h2, p { margin-top: 0; }
 }
 
 @media (max-width: 480px) {
-  .public-nav > a:first-child { display: none; }
   .public-header { height: 70px; }
-  .public-brand strong { font-size: .92rem; }
-  .public-employee-link { padding: 0 .45rem !important; }
+  .public-header-brands { gap: .35rem; }
+  .public-header-brands img { width: min(35vw, 128px); height: 52px; }
+  .public-header-brands > span { height: 24px; }
+  .public-employee-link { width: 38px !important; min-height: 38px !important; }
 }
