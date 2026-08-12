@@ -1,0 +1,2 @@
+-- Fase 1 no introduce catálogos de demostración.
+-- Cree el primer usuario en Authentication y promuévalo siguiendo README.md.
