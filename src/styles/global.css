@@ -287,12 +287,12 @@ h1, h2, p { margin-top: 0; }
 .public-nav a:first-child { background: rgba(255,255,255,.11); color: white; }
 .public-nav a:hover { background: rgba(255,255,255,.16); color: white; }
 .public-catalog-page > main { max-width: 1250px; margin: auto; padding: 0 1rem 3rem; }
-.public-hero { display: grid; gap: 1.25rem; padding: 2.3rem 0 1.5rem; }
+.public-hero { display: grid; gap: 1.25rem; padding: 1.8rem 0 1.25rem; }
 .public-hero-copy { align-self: center; }
 .public-hero-copy .eyebrow { display: flex; align-items: center; gap: .45rem; }
 .public-hero .eyebrow { color: #286ca7; }
-.public-hero h1 { max-width: 740px; margin-bottom: .8rem; font-size: clamp(2.35rem, 9vw, 5.2rem); line-height: 1.01; letter-spacing: -.06em; }
-.public-hero-copy > p:last-child { max-width: 650px; margin-bottom: 0; color: #60756d; font-size: .9rem; line-height: 1.65; }
+.public-hero h1 { max-width: 680px; margin-bottom: .55rem; font-size: clamp(2.05rem, 7.5vw, 4.35rem); line-height: 1.03; letter-spacing: -.055em; }
+.public-hero-copy > p:last-child { max-width: 520px; margin-bottom: 0; color: #60778a; font-size: .9rem; line-height: 1.55; }
 .store-brands { overflow: hidden; border-radius: 20px; padding: 1.1rem; background: linear-gradient(135deg, #195b94, #103b67); color: #d9e9f6; box-shadow: 0 16px 40px rgba(17,65,108,.22); }
 .store-brands > span { display: block; margin-bottom: .65rem; font-size: .58rem; font-weight: 800; text-align: center; text-transform: uppercase; letter-spacing: .13em; }
 .store-brands > div { display: flex; min-height: 124px; align-items: center; justify-content: center; gap: .8rem; }
@@ -430,7 +430,7 @@ h1, h2, p { margin-top: 0; }
   .image-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .catalog-preview-link { display: inline-flex; }
   .public-header { padding: 0 2rem; }
-  .public-hero { padding-top: 3.2rem; }
+  .public-hero { padding-top: 2.6rem; }
   .public-catalog-page > main { padding-right: 2rem; padding-left: 2rem; }
   .public-controls { grid-template-columns: minmax(220px, 1fr) 190px 190px; }
   .public-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
