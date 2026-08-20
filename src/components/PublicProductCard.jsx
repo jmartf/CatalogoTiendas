@@ -14,6 +14,7 @@ export default function PublicProductCard({ product }) {
       </div>
       <div className="public-card-copy">
         <h2>{product.title}</h2>
+        <span className="public-card-code"><i className="bi bi-upc-scan" aria-hidden="true" /> {product.code}</span>
         <strong className="public-card-price">{formatPublicPrice(product.price)}</strong>
         <div className="public-card-features">
           {product.sizes?.name && <span><small><i className="bi bi-rulers" aria-hidden="true" /> Talla</small><strong>{product.sizes.name}</strong></span>}
