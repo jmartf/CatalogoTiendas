@@ -279,8 +279,8 @@ h1, h2, p { margin-top: 0; }
 .public-catalog-page { min-height: 100vh; background: linear-gradient(180deg, #f2f6fb 0, #fafbfc 420px, #f7f7f5 100%); color: #17334e; }
 .public-header { position: sticky; top: 0; z-index: 10; display: flex; height: 76px; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,.14); padding: 0 1rem; background: rgba(20,70,119,.97); color: white; box-shadow: 0 8px 28px rgba(12,48,84,.2); backdrop-filter: blur(14px); }
 .public-header-brands { display: flex; min-width: 0; height: 100%; overflow: hidden; align-items: center; gap: .6rem; }
-.public-header-brands img { display: block; width: clamp(105px, 19vw, 175px); height: 58px; object-fit: contain; transform: scale(1.95); }
-.public-header-brands img:last-child { transform: scale(2.05); }
+.public-header-brands img { display: block; width: clamp(112px, 20vw, 185px); height: 62px; object-fit: contain; transform: scale(2.2); }
+.public-header-brands img:last-child { transform: scale(2.32); }
 .public-header-brands > span { flex: 0 0 1px; width: 1px; height: 30px; background: rgba(255,255,255,.28); }
 .public-nav { display: flex; align-items: center; gap: .35rem; }
 .public-nav a { display: inline-flex; width: 42px; min-height: 42px; align-items: center; justify-content: center; border-radius: 11px; padding: 0; color: white; font-size: 1.1rem; font-weight: 800; }
@@ -478,7 +478,7 @@ h1, h2, p { margin-top: 0; }
 @media (max-width: 480px) {
   .public-header { height: 70px; }
   .public-header-brands { gap: .35rem; }
-  .public-header-brands img { width: min(35vw, 128px); height: 52px; }
+  .public-header-brands img { width: min(36vw, 132px); height: 56px; }
   .public-header-brands > span { height: 24px; }
   .public-employee-link { width: 38px !important; min-height: 38px !important; }
 }
