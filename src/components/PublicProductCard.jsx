@@ -13,8 +13,8 @@ export default function PublicProductCard({ product }) {
         <span className={`public-status public-status-${product.status}`}><i className={`bi ${product.status === 'available' ? 'bi-check-circle-fill' : 'bi-clock-fill'}`} aria-hidden="true" /> {STATUS_LABELS[product.status]}</span>
       </div>
       <div className="public-card-copy">
-        <h2>{product.title}</h2>
         <span className="public-card-code"><i className="bi bi-upc-scan" aria-hidden="true" /> {product.code}</span>
+        <h2>{product.title}</h2>
         <strong className="public-card-price">{formatPublicPrice(product.price)}</strong>
         <div className="public-card-features">
           {product.sizes?.name && <span><small><i className="bi bi-rulers" aria-hidden="true" /> Talla</small><strong>{product.sizes.name}</strong></span>}
